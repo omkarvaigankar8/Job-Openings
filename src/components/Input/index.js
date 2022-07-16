@@ -1,13 +1,7 @@
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useCallback} from 'react'
 import './search.scss'
 
 const Text = ({ data, placeholder, setSearchKey, searchKey, searchFilter }) => {
-  const [param, setParam] = useState('')
-  useEffect(() => {
-    if (searchKey == '') {
-      setParam('');
-    }
-  }, [searchKey])
   // console.log("DATA", data)
   const debounce = (func) => {
     let timer;
@@ -24,7 +18,6 @@ const Text = ({ data, placeholder, setSearchKey, searchKey, searchFilter }) => {
     // console.log("VA", value)
     // console.log("data", data)
     setSearchKey(value)
-    setParam(value)
     searchFilter(data);
   }
   const debouncing = useCallback(debounce(handleChange), [])
