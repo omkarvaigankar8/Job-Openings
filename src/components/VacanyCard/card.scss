@@ -1,0 +1,21 @@
+img{
+    width: 20px;
+    height: 20px;
+}
+.card_container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.button{
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid skyblue;
+    a{
+        color: skyblue;
+    }
+    margin-right: 10px;
+}
+.link{
+    color: #2c2c2c;
+}
